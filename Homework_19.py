@@ -4,12 +4,15 @@ class Buiding:
         self.buildingType = 'десять'
 
     def __eq__(self, other):
-        return self.numberOfFloors == other.buildingType
+        other.numberOfFloors = 10
+        other.buildingType = 'десять'
+        return self.numberOfFloors == other.numberOfFloors and self.buildingType == other.buildingType
 
 
-my_buiding = Buiding()
+my_buiding1 = Buiding()
+my_buiding2 = Buiding()
 
-if Buiding.__eq__(self=my_buiding, other=my_buiding):
-    print('True')
-else:
-    print('False')
+if my_buiding1 == my_buiding2:
+    print('Одинаковые')
+if my_buiding1 != my_buiding2:
+    print('Не одинаковые')
